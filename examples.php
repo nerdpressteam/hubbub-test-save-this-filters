@@ -76,4 +76,4 @@ function hubbub_save_this_filter_email_message_by_post_id( $email_message, $post
 add_filter( 'hubbub_save_this_filter_email_message', 'hubbub_save_this_filter_email_message_by_post_id', 10, 2 );
 
 // Turn off saving cookies
-add_filter( 'hubbub_save_this_filter_should_save_cookie', __return_false);
+add_filter( 'hubbub_save_this_filter_should_save_cookie', __return_false() );

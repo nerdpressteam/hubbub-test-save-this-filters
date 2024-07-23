@@ -42,7 +42,7 @@ All currently supported actions and filters are in [_actions.php](https://github
 - **hubbub_save_this_filter_footer_site_title** - The Site Title in the footer of the email.
 - **hubbub_save_this_filter_image_url** - The URL of the image provided in Hubbub > Save This settings.
 
-- **hubbub_save_this_filter_should_save_cookie** - Boolean. Determines whether or not to save a cookie. Default true.
+- **hubbub_save_this_filter_should_save_cookie** - String (expected: "false"). Determines whether or not to save a cookie. Default 'true'.
 
 - **hubbub_save_this_filter_html_template** - The raw HTML template prior to adding any content to it.
 - **hubbub_save_this_filter_html_email_complete** - The raw HTML template after adding all of the content just before sending.

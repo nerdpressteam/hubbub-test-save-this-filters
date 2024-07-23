@@ -29,7 +29,7 @@ function hubbub_save_this_filter_email_fromname( $email_fromName, $post_id ) {
 add_filter( 'hubbub_save_this_filter_email_fromname', 'hubbub_save_this_filter_email_fromname', 10, 2 );
 
 function hubbub_save_this_filter_email_fromaddress( $email_fromAddress, $post_id ) {
-    return '<support@morehubbub.com>';
+    return 'support@morehubbub.com';
 }
 add_filter( 'hubbub_save_this_filter_email_fromaddress', 'hubbub_save_this_filter_email_fromaddress', 10, 2 );
 
@@ -74,5 +74,8 @@ function hubbub_save_this_filter_html_email_complete( $html_email_complete, $pos
 }
 add_filter( 'hubbub_save_this_filter_html_email_complete', 'hubbub_save_this_filter_html_email_complete', 10, 2 );
 
-
-add_filter( 'hubbub_save_this_filter_should_save_cookie', __return_false); // Boolean to determine whether or not to save cookies
+function hubbub_save_this_filter_should_save_cookie( $should_run ) {
+    // Default: 'true'
+    return 'false'; // must return string
+}
+add_filter( 'hubbub_save_this_filter_should_save_cookie', 'hubbub_save_this_filter_should_save_cookie', 10, 1 ); // Boolean to determine whether or not to save cookies
