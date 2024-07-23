@@ -38,6 +38,11 @@ function hubbub_save_this_filter_email_message( $email_message, $post_id ) {
 }
 add_filter( 'hubbub_save_this_filter_email_message', 'hubbub_save_this_filter_email_message', 10, 2 );
 
+function hubbub_save_this_filter_email_bottomcontent( $email_message, $post_id ) {
+    return '<h3>Bottom Content Heading</h3><p>An example bottom content area.</p>';
+}
+add_filter( 'hubbub_save_this_filter_email_bottomcontent', 'hubbub_save_this_filter_email_bottomcontent', 10, 2 );
+
 function hubbub_save_this_filter_email_subject( $email_subject, $post_id ) {
     return 'Example Email Subject';
 }
