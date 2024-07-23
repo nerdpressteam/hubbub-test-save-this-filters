@@ -74,6 +74,32 @@ function hubbub_save_this_filter_html_email_complete( $html_email_complete, $pos
 }
 add_filter( 'hubbub_save_this_filter_html_email_complete', 'hubbub_save_this_filter_html_email_complete', 10, 2 );
 
+
+function hubbub_save_this_filter_custom_section_1( $content, $post_id ) {
+    return 'Custom Section 1';
+}
+add_filter( 'hubbub_save_this_filter_custom_section_1', 'hubbub_save_this_filter_custom_section_1', 10, 2 );
+
+function hubbub_save_this_filter_custom_section_2( $content, $post_id ) {
+    return 'Custom Section 2';
+}
+add_filter( 'hubbub_save_this_filter_custom_section_2', 'hubbub_save_this_filter_custom_section_2', 10, 2 );
+
+function hubbub_save_this_filter_custom_section_3( $content, $post_id ) {
+    return 'Custom Section 3';
+}
+add_filter( 'hubbub_save_this_filter_custom_section_3', 'hubbub_save_this_filter_custom_section_3', 10, 2 );
+
+// function hubbub_save_this_filter_custom_section_4( $content, $post_id ) {
+//     return 'Custom Section 4';
+// }
+// add_filter( 'hubbub_save_this_filter_custom_section_4', 'hubbub_save_this_filter_custom_section_4', 10, 2 );
+
+function hubbub_save_this_filter_custom_section_4_add_image( $content, $post_id ) {
+    return '<div align="center"><a href="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"><img width="400" src="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"></a></div>';
+}
+add_filter( 'hubbub_save_this_filter_custom_section_4', 'hubbub_save_this_filter_custom_section_4_add_image', 10, 2 );
+
 function hubbub_save_this_filter_should_save_cookie( $should_run ) {
     // Default: 'true'
     return 'false'; // must return string

@@ -47,6 +47,11 @@ All currently supported actions and filters are in [_actions.php](https://github
 - **hubbub_save_this_filter_html_template** - The raw HTML template prior to adding any content to it.
 - **hubbub_save_this_filter_html_email_complete** - The raw HTML template after adding all of the content just before sending.
 
+- **hubbbub_save_this_filter_custom_section_1** - Custom content section. Below site name or logo.
+- **hubbbub_save_this_filter_custom_section_2** - Custom content section. Below email message area.
+- **hubbbub_save_this_filter_custom_section_3** - Custom content section. Below post title.
+- **hubbbub_save_this_filter_custom_section_4** - Custom content section. Below post URL.
+
 ## Support Docs
 
 For more information [see our Support Doc](https://morehubbub.com/docs/save-this-filters/)
