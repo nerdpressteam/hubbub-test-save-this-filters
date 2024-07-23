@@ -21,7 +21,7 @@ function hubbub_save_this_action_sent_notify_your_boss( $post_id ){
      * Anyway, you're going to get an email everytime this happens
      * to remind you how smart you were for hiring me!
      * Have a great day,
-     * Excited Emma!
+     * Excited Eliza!
      * 
      */
 }
