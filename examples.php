@@ -81,7 +81,24 @@ function hubbub_save_this_filter_custom_section_4_add_image( $content, $post_id 
 }
 add_filter( 'hubbub_save_this_filter_custom_section_4', 'hubbub_save_this_filter_custom_section_4_add_image', 10, 2 );
 
+// Custom Link Color based on the time of day
+function hubbub_save_this_filter_email_customlinkcolor_day_or_night( $custom_link_color, $post_id ) {
+     // Get the current hour
+     $currentHour = date('H');
 
+     // Define the start and end hours for day time
+     $dayStart = 6; // 6 AM
+     $dayEnd = 18;  // 6 PM
+ 
+     // Check if the current hour is between dayStart and dayEnd
+     if ($currentHour >= $dayStart && $currentHour < $dayEnd) {
+         // Keep the same color? Or, make it ligher?
+     } else {
+         $custom_link_color = "#000"; // Make it black!
+     }
+    return $custom_link_color;
+}
+add_filter( 'hubbub_save_this_filter_email_customlinkcolor', 'hubbub_save_this_filter_email_customlinkcolor_day_or_night', 10, 2 );
 
 
 // Turn off saving cookies

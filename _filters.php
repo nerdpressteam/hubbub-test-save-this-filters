@@ -33,6 +33,11 @@ function hubbub_save_this_filter_email_fromaddress( $email_fromAddress, $post_id
 }
 add_filter( 'hubbub_save_this_filter_email_fromaddress', 'hubbub_save_this_filter_email_fromaddress', 10, 2 );
 
+function hubbub_save_this_filter_email_featuredimageurl( $url, $post_id ) {
+    return 'https://morehubbub.com/wp-content/uploads/2023/12/hubbub-logo-red-transparent.png';
+}
+add_filter( 'hubbub_save_this_filter_email_featuredimageurl', 'hubbub_save_this_filter_email_featuredimageurl', 10, 2 );
+
 function hubbub_save_this_filter_email_message( $email_message, $post_id ) {
     return '<p>An example message.</p>';
 }
@@ -42,6 +47,11 @@ function hubbub_save_this_filter_email_bottomcontent( $email_message, $post_id )
     return '<h3>Bottom Content Heading</h3><p>An example bottom content area.</p>';
 }
 add_filter( 'hubbub_save_this_filter_email_bottomcontent', 'hubbub_save_this_filter_email_bottomcontent', 10, 2 );
+
+function hubbub_save_this_filter_email_customlinkcolor( $custom_link_color, $post_id ) {
+    return '#000';
+}
+add_filter( 'hubbub_save_this_filter_email_customlinkcolor', 'hubbub_save_this_filter_email_customlinkcolor', 10, 2 );
 
 function hubbub_save_this_filter_email_subject( $email_subject, $post_id ) {
     return 'Example Email Subject';
