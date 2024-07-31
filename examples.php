@@ -76,10 +76,10 @@ function hubbub_save_this_filter_email_message_by_post_id( $email_message, $post
 add_filter( 'hubbub_save_this_filter_email_message', 'hubbub_save_this_filter_email_message_by_post_id', 10, 2 );
 
 // Add an image to the bottom of the Save This email
-function hubbub_save_this_filter_custom_section_4_add_image( $content, $post_id ) {
+function hubbub_save_this_filter_before_bottom_content_add_image( $content, $post_id ) {
     return '<div align="center"><a href="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"><img src="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"></a></div>';
 }
-add_filter( 'hubbub_save_this_filter_custom_section_4', 'hubbub_save_this_filter_custom_section_4_add_image', 10, 2 );
+add_filter( 'hubbub_save_this_filter_before_bottom_content', 'hubbub_save_this_filter_before_bottom_content_add_image', 10, 2 );
 
 // Custom Link Color based on the time of day
 function hubbub_save_this_filter_email_customlinkcolor_day_or_night( $custom_link_color, $post_id ) {
