@@ -53,10 +53,11 @@ All filters expect to accept and return strings unless otherwise noted.
 - **hubbub_save_this_filter_html_template** - The raw HTML template prior to adding any content to it.
 - **hubbub_save_this_filter_html_email_complete** - The raw HTML template after adding all of the content just before sending.
 
-- **hubbbub_save_this_filter_custom_section_1** - Custom content section. Below site name or logo.
-- **hubbbub_save_this_filter_custom_section_2** - Custom content section. Below email message area.
-- **hubbbub_save_this_filter_custom_section_3** - Custom content section. Below post title.
-- **hubbbub_save_this_filter_custom_section_4** - Custom content section. Below post URL.
+- **hubbbub_save_this_filter_custom_after_logo** - Custom content section. Below site name or logo.
+- **hubbbub_save_this_filter_custom_after_message** - Custom content section. Below email message area.
+- **hubbbub_save_this_filter_custom_after_post_link** - Custom content section. Below post title.
+- **hubbbub_save_this_filter_custom_before_bottom_content** - Custom content section. Below post URL and before bottom content.
+- **hubbbub_save_this_filter_custom_after_bottom_content** - Custom content section. After bottom content.
 
 ## Support Docs
 
