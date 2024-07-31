@@ -63,3 +63,8 @@ function hubbub_save_this_action_mailing_list_added_mailerlite( $post_id ){
     // Do something!
 }
 add_action( 'hubbub_save_this_action_mailing_list_added_mailerlite', 'hubbub_save_this_action_mailing_list_added_mailerlite', 10, 1 );
+
+function hubbub_save_this_action_mailing_list_added_mailerlite_classic( $post_id ){
+    // Do something!
+}
+add_action( 'hubbub_save_this_action_mailing_list_added_mailerlite_classic', 'hubbub_save_this_action_mailing_list_added_mailerlite_classic', 10, 1 );

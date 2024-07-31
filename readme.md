@@ -27,6 +27,7 @@ All currently supported actions and filters are in [_actions.php](https://github
 - **hubbub_save_this_action_mailing_list_added_flodesk** - Added to FloDesk.
 - **hubbub_save_this_action_mailing_list_added_mailchimp** - Added to MailChimp.
 - **hubbub_save_this_action_mailing_list_added_mailerlite** - Added to MailerLite.
+- **hubbub_save_this_action_mailing_list_added_mailerlite_classic** - Added to MailerLite Classic.
 
 ## List of Filters
 
