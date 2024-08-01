@@ -66,9 +66,9 @@ For more information [see our Support Doc](https://morehubbub.com/docs/save-this
 
 ## Contributors
 
-- @nerdpressteam
-    - @cdevroe
-    - @blogtutor
+- [@nerdpressteam](https://github.com/nerdpressteam/)
+    - [@cdevroe](https://github.com/cdevroe/)
+    - [@blogtutor](https://github.com/blogtutor/)
 
 ## Changelog
 
