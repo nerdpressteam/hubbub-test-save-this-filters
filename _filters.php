@@ -74,7 +74,8 @@ function hubbub_save_this_filter_image_url( $image_url, $post_id ) { // AKA site
 add_filter( 'hubbub_save_this_filter_image_url', 'hubbub_save_this_filter_image_url', 10, 2 );
 
 function hubbub_save_this_filter_footer_site_title( $footer_site_title, $post_id ) {
-    return 'Hubbub (in footer)';
+    $footer = 'You received this email because you saved a post on ' . $footer_site_title;
+    return $footer;
 }
 add_filter( 'hubbub_save_this_filter_footer_site_title', 'hubbub_save_this_filter_footer_site_title', 10, 2 );
 
@@ -105,17 +106,18 @@ function hubbub_save_this_filter_custom_after_post_link( $content, $post_id ) {
 }
 add_filter( 'hubbub_save_this_filter_custom_after_post_link', 'hubbub_save_this_filter_custom_after_post_link', 10, 2 );
 
-function hubbub_save_this_filter_custom_before_bottom_content_add_image( $content, $post_id ) {
-    return '<div align="center"><a href="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"><img width="400" src="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"></a></div>';
+function hubbub_save_this_filter_custom_before_bottom_content_add_flair( $content, $post_id ) {
+    return '<div align="center"><a href="' . get_permalink( $post_id ) . '"><img src="https://mysite.com/fleur-de-lis.png" alt="" width="25" height="25"></a></div>';
 }
-add_filter( 'hubbub_save_this_filter_custom_before_bottom_content', 'hubbub_save_this_filter_custom_before_bottom_content_add_image', 10, 2 );
+add_filter( 'hubbub_save_this_filter_custom_before_bottom_content', 'hubbub_save_this_filter_custom_before_bottom_content_add_flair', 10, 2 );
 
 function hubbub_save_this_filter_custom_after_bottom_content_add_image( $content, $post_id ) {
-    return '<div align="center"><a href="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"><img width="400" src="https://morehubbub.com/wp-content/uploads/2024/07/Download-Button-PNG-Photo1.png"></a></div>';
+    return '<div align="center"><a href="https://whywatermelon.com"><img width="400" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGQ5aGswdHpxMjhsampqeGpxbDgxYjZoY3NvOTk4dGN3cm01bDd0dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4z2UsHgV7JkpW/200.webp" alt="Why is there a watermelon there?" title="No matter where you go, there you are."></a></div>';
 }
 add_filter( 'hubbub_save_this_filter_custom_after_bottom_content', 'hubbub_save_this_filter_custom_after_bottom_content_add_image', 10, 2 );
 
 function hubbub_save_this_filter_should_save_cookie( $should_run ) {
+    // We save a cookie to populate the form with the visitor's email address on subsequent page loads.
     // Default: 'true'
     return 'false'; // must return string
 }
