@@ -112,7 +112,7 @@ function hubbub_save_this_filter_custom_before_bottom_content_add_flair( $conten
 add_filter( 'hubbub_save_this_filter_custom_before_bottom_content', 'hubbub_save_this_filter_custom_before_bottom_content_add_flair', 10, 2 );
 
 function hubbub_save_this_filter_custom_after_bottom_content_add_image( $content, $post_id ) {
-    return '<div align="center"><a href="https://whywatermelon.com"><img width="400" src="https://giphy.com/gifs/4z2UsHgV7JkpW" alt="No matter where you go, there you are."></a></div>';
+    return '<div align="center"><a href="https://whywatermelon.com"><img width="400" src="https://giphy.com/gifs/4z2UsHgV7JkpW" alt="Why is there a watermelon there?" title="No matter where you go, there you are."></a></div>';
 }
 add_filter( 'hubbub_save_this_filter_custom_after_bottom_content', 'hubbub_save_this_filter_custom_after_bottom_content_add_image', 10, 2 );
 
