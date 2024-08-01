@@ -107,12 +107,12 @@ function hubbub_save_this_filter_custom_after_post_link( $content, $post_id ) {
 add_filter( 'hubbub_save_this_filter_custom_after_post_link', 'hubbub_save_this_filter_custom_after_post_link', 10, 2 );
 
 function hubbub_save_this_filter_custom_before_bottom_content_add_flair( $content, $post_id ) {
-    return '<div align="center"><img src="https://mysite.com/fleur-de-lis.png" alt=""></div>;
+    return '<div align="center"><a href="' . get_permalink( $post_id ) . '"><img src="https://mysite.com/fleur-de-lis.png" alt="" width="25" height="25"></a></div>';
 }
 add_filter( 'hubbub_save_this_filter_custom_before_bottom_content', 'hubbub_save_this_filter_custom_before_bottom_content_add_flair', 10, 2 );
 
 function hubbub_save_this_filter_custom_after_bottom_content_add_image( $content, $post_id ) {
-    return '<div align="center"><a href="https://whywatermelon.com"><img width="400" src="https://giphy.com/gifs/4z2UsHgV7JkpW" alt="Why is there a watermelon there?" title="No matter where you go, there you are."></a></div>';
+    return '<div align="center"><a href="https://whywatermelon.com"><img width="400" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGQ5aGswdHpxMjhsampqeGpxbDgxYjZoY3NvOTk4dGN3cm01bDd0dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4z2UsHgV7JkpW/200.webp" alt="Why is there a watermelon there?" title="No matter where you go, there you are."></a></div>';
 }
 add_filter( 'hubbub_save_this_filter_custom_after_bottom_content', 'hubbub_save_this_filter_custom_after_bottom_content_add_image', 10, 2 );
 
