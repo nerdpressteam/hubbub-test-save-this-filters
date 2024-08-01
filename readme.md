@@ -72,6 +72,9 @@ For more information [see our Support Doc](https://morehubbub.com/docs/save-this
 
 ## Changelog
 
+**1.0.1**
+- Tweak examples within _filters.php
+
 **1.0.0**
 - Initial commit
 - Actions file
