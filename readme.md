@@ -1,6 +1,6 @@
-# Hubbub Test: Save This Actions and Filters
+# Hubbub: Test Save This Actions and Filters
 
-A sample WordPress plugin that adds example actions and filters for Hubbub's Save This feature.
+A sample WordPress plugin that adds example actions and filters for Hubbub's Save This feature. The Hubbub team uses this plugin to test Hubbub Pro. See the List of Actions and List of Filters below for a full list of what is currently supported.
 
 ## Requirements
 
@@ -64,9 +64,17 @@ All filters expect to accept and return strings unless otherwise noted.
 
 For more information [see our Support Doc](https://morehubbub.com/docs/save-this-filters/)
 
+## Contributors
+
+- @nerdpressteam
+    - @cdevroe
+    - @blogtutor
+
 ## Changelog
 
 **1.0.0**
 - Initial commit
-- Examples
+- Actions file
+- Filters file
+- Examples files
 - Readme

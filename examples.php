@@ -100,6 +100,18 @@ function hubbub_save_this_filter_email_customlinkcolor_day_or_night( $custom_lin
 }
 add_filter( 'hubbub_save_this_filter_email_customlinkcolor', 'hubbub_save_this_filter_email_customlinkcolor_day_or_night', 10, 2 );
 
+// Show Popular Posts at the bottom of the Save This email
+// Requires the WordPress Popular Posts plugin: https://wordpress.org/plugins/wordpress-popular-posts/
+// Also: This is an unstyled example, it would require styling.
+// Submitted by Andrew Wilder https://github.com/blogtutor/ | https://www.nerdpress.net/
+function hubbub_save_this_filter_custom_after_bottom_content_popular_posts( $content, $post_id ) {
+	if ( shortcode_exists( 'wpp' ) ) { 
+		$content = '<p>You may also like...</p>' . do_shortcode( '[wpp post_type="post" limit=5 range="daily" order_by="views"]' );
+	}
+    return $content;
+}
+add_filter( 'hubbub_save_this_filter_custom_after_bottom_content', 'hubbub_save_this_filter_custom_after_bottom_content_popular_posts', 10, 2 );
+
 
 // Turn off saving cookies
 add_filter( 'hubbub_save_this_filter_should_save_cookie', __return_false() );
