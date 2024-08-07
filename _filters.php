@@ -89,6 +89,11 @@ function hubbub_save_this_filter_html_email_complete( $html_email_complete, $pos
 }
 add_filter( 'hubbub_save_this_filter_html_email_complete', 'hubbub_save_this_filter_html_email_complete', 10, 2 );
 
+function hubbub_save_this_filter_headers( $headers, $post_id ) {
+    // Do something with the $headers array
+    return $headers;
+}
+add_filter( 'hubbub_save_this_filter_headers', 'hubbub_save_this_filter_headers', 10, 2);
 
 function hubbub_save_this_filter_custom_after_logo( $content, $post_id ) {
     return 'Custom Section: After Logo';

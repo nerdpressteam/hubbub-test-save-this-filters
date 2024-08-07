@@ -81,6 +81,13 @@ function hubbub_save_this_filter_before_bottom_content_add_image( $content, $pos
 }
 add_filter( 'hubbub_save_this_filter_before_bottom_content', 'hubbub_save_this_filter_before_bottom_content_add_image', 10, 2 );
 
+// Add BCC to every email
+function hubbub_save_this_filter_headers_add_bcc( $headers, $post_id ) {
+    $headers[] = 'BCC: Name <email@domain.com>';
+    return $headers;
+}
+add_filter( 'hubbub_save_this_filter_headers', 'hubbub_save_this_filter_headers_add_bcc', 10, 2);
+
 // Custom Link Color based on the time of day
 function hubbub_save_this_filter_email_customlinkcolor_day_or_night( $custom_link_color, $post_id ) {
      // Get the current hour

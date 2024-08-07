@@ -47,13 +47,10 @@ All filters expect to accept and return strings unless otherwise noted.
 - **hubbub_save_this_filter_footer_site_title** - The Site Title in the footer of the email.
 - **hubbub_save_this_filter_image_url** - The URL of the image provided in Hubbub > Save This settings.
 - **hubbub_save_this_filter_email_customlinkcolor** - The Custom Link Color provided in Hubbub > Save This settings.
-
-
 - **hubbub_save_this_filter_should_save_cookie** - String (expected: "false"). Determines whether or not to save a cookie. Default 'true'.
-
 - **hubbub_save_this_filter_html_template** - The raw HTML template prior to adding any content to it.
 - **hubbub_save_this_filter_html_email_complete** - The raw HTML template after adding all of the content just before sending.
-
+- **hubbub_save_this_filter_headers** - The headers array including FROM, TO, etc.
 - **hubbbub_save_this_filter_custom_after_logo** - Custom content section. Below site name or logo.
 - **hubbbub_save_this_filter_custom_after_message** - Custom content section. Below email message area.
 - **hubbbub_save_this_filter_custom_after_post_link** - Custom content section. Below post title.
