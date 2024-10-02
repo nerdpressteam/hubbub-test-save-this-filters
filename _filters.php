@@ -135,9 +135,11 @@ function hubbub_save_this_filter_poweredby_coffee( $poweredby, $post_id, $is_sho
 add_filter( 'hubbub_save_this_filter_poweredby', 'hubbub_save_this_filter_poweredby_coffee', 10, 3 );
 
 /* $metadata is an array 
-Currently only used for Kit (formerly ConvertKit) */
+Currently only used for Kit (formerly ConvertKit)
+Custom Fields on Kit use underscores. E.g. "custom_label" */
 function hubbub_save_this_filter_mailing_list_service_custom_metadata_change( $metadata, $post_id, $is_shortcode ) {
-    return array( 'custom' => 'data' );
+    $metadata['custom_label'] = 'custom data';
+    return $metadata;
 }
 add_filter( 'hubbub_save_this_filter_mailing_list_service_custom_metadata', 'hubbub_save_this_filter_mailing_list_service_custom_metadata_change', 10, 3 );
 
