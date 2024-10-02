@@ -69,6 +69,10 @@ For more information [see our Support Doc](https://morehubbub.com/docs/save-this
 
 ## Changelog
 
+**1.0.3**
+- Added new filters available in Hubbub Pro 2.24.0
+- Updated all available filters to include the is_shortcode boolean (2.24.0 or above only)
+
 **1.0.2**
 - Added documentation, filter and example of email headers filter: `hubbub_save_this_filter_headers`
 
