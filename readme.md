@@ -24,6 +24,9 @@ Have an idea? Please let us know!
 
 ## Changelog
 
+**1.0.4**
+- Added a new example
+
 **1.0.3**
 - Added new filters available in Hubbub Pro 2.24.0
 - Updated all available filters to include the is_shortcode boolean (2.24.0 or above only)

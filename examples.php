@@ -60,6 +60,38 @@ function hubbub_save_this_filter_email_subject_by_category( $email_subject, $pos
 }
 add_filter( 'hubbub_save_this_filter_email_subject', 'hubbub_save_this_filter_email_subject_by_category', 10, 2 );
 
+// Save subscriber to different MailerLite group based on post category
+function add_subscriber_to_mailerlite_group_based_on_post_category( $subscriber_data, $post_id, $is_shortcode ) {
+
+    if ( ! isset( $subscriber_data['groups'] ) ) { 
+        return $subscriber_data;
+    } else {
+
+        // If the Category is X, then add to MailerLite Group Y
+
+        if ( has_category( 'my-category-slug', $post_id ) ) {
+            $subscriber_data['groups'][0] = 'MAILERLITEGROUPID';
+        }
+
+        if ( has_category( 'my-category-slug2', $post_id ) ) {
+            $subscriber_data['groups'][0] = 'MAILERLITEGROUPID2';
+        }
+
+        if ( has_category( 'my-category-slug3', $post_id ) ) {
+            $subscriber_data['groups'][0] = 'MAILERLITEGROUPID3';
+        }
+
+        if ( has_category( 'my-category-slug4', $post_id ) ) {
+            $subscriber_data['groups'][0] = 'MAILERLITEGROUPID4';
+        }
+
+    }
+
+    return $subscriber_data;
+}
+
+add_filter( 'hubbub_save_this_filter_subscriber_data', 'add_subscriber_to_mailerlite_group_based_on_post_category' );
+
 
 // Change the email's message based on post ID
 function hubbub_save_this_filter_email_message_by_post_id( $email_message, $post_id ) {
